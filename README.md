@@ -2,4 +2,4 @@
 
 Une implémentation des listes chainées en C.
 
-ok
+
