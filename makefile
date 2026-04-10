@@ -12,7 +12,13 @@ help :
 	@echo "  --- run1 : lance le fichier test01"
 	@echo "  --- run2 : lance le fichier test02"
 	@echo "  --- run3 : lance le fichier test03"
+	@echo "  --- bench_test02 : génère l'executable de test02 intégrant le diagnostique de fuite de mémoire "
 
+
+#diagnostic de mémoire de test02
+bench_test02 :
+	@echo '---executable de test02 intégrant le diagnostique de fuite de mémoire---'
+	@gcc -Wall -g -fsanitize=address $(TEST)/test02.c $(LIB)/liste-c.o -o $(BUILD)/test02
 
 # génération de l'exécutable test01
 $(BUILD)/test01 : $(TEST)/test01.c
